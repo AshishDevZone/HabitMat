@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="activity-page" style="background: linear-gradient(to bottom right,#fff3e0,#ffe0b2);">
+
+    <header>
+        <img src="assets/logo.png" class="logo">
+        <h2>📚 Boost Your Knowledge</h2>
+    </header>
+
+    <div class="water-animation"
+        style="background: linear-gradient(to top right,#ffecb3,#ffe082); border-radius:20%; width:80px; height:80px; animation: wave 1.5s infinite alternate;">
+    </div>
+
+    <input type="number" id="studyGoalInput" placeholder="Set daily study goal (hours)">
+    <button onclick="setGoal('study','studyGoalInput','studyStatus')">Set Goal</button>
+
+    <button onclick="updateProgress('study',0.5,'studyStatus')">I studied 0.5 hours</button>
+
+    <p class="status" id="studyStatus"></p>
+
+    <a href="index.html" style="margin-top:20px; display:inline-block; text-decoration:none; color:#3498db;">← Back to
+        Home</a>
+
+    <script src="script.js"></script>
+    <script>
+        updateStatus('study', 'studyStatus'); // show current progress
+    </script>
+</body>
+
+</html>

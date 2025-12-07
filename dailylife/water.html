@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="activity-page">
+    <header>
+        <img src="assets/logo.png" class="logo">
+        <h2>💧 Stay Hydrated</h2>
+    </header>
+
+    <div class="water-animation"></div>
+
+    <input type="number" id="waterGoalInput" placeholder="Set daily glasses goal">
+    <button onclick="setGoal('water','waterGoalInput','waterStatus')">Set Goal</button>
+
+    <button onclick="updateProgress('water',1,'waterStatus')">I drank 1 glass</button>
+
+    <p class="status" id="waterStatus"></p>
+
+    <a href="index.html" style="margin-top:20px; display:inline-block; text-decoration:none; color:#3498db;">← Back to
+        Home</a>
+
+    <script src="script.js"></script>
+    <script>
+        updateStatus('water', 'waterStatus'); // show current progress
+    </script>
+</body>
+
+</html>
