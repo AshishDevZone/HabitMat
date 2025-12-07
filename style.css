@@ -1,0 +1,160 @@
+/* Reset & Fonts */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+body {
+    background-color: #9cbae7;
+    /* fallback color */
+    color: #333333;
+    background-image: url("assets/bg.jpg");
+    /* correct syntax */
+    background-size: cover;
+    /* make image cover full body */
+    background-repeat: no-repeat;
+    /* prevent repeating */
+    background-position: center;
+    /* center the image */
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(90deg, #1741ca, #dd0f3b);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(177, 7, 44, 0.2);
+}
+
+header .logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Home Page Cards */
+.home-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    background: linear-gradient(145deg, #092bec, #e0e0e0);
+    border-radius: 20px;
+    box-shadow: 6px 6px 15px rgba(10, 233, 129, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 6px 10px 20px rgba(14, 206, 212, 0.2);
+}
+
+/* Activity Page Common */
+.activity-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom right, #e0f7fa, #fff3e0);
+}
+
+.activity-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px #ccc;
+}
+
+/* Input & Button */
+.activity-page input[type="number"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 200px;
+    font-size: 1rem;
+}
+
+.activity-page button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.activity-page button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Status */
+.status {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+}
+
+/* Water Animation Example */
+.water-animation {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(180deg, #00f2fe, #4facfe);
+    border-radius: 50%;
+    margin: 20px 0;
+    animation: wave 2s infinite alternate;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

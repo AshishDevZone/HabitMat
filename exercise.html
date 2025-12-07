@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="activity-page" style="background: linear-gradient(to bottom right,#e0f7fa,#b2ebf2);">
+
+    <header>
+        <img src="assets/logo.png" class="logo">
+        <h2>💪 Stay Fit & Energetic</h2>
+    </header>
+
+    <div class="water-animation"
+        style="background: linear-gradient(to top right,#4dd0e1,#26c6da); border-radius:25%; width:100px; height:100px; animation: wave 1.2s infinite alternate;">
+    </div>
+
+    <input type="number" id="exerciseGoalInput" placeholder="Set daily exercise goal (minutes)">
+    <button onclick="setGoal('exercise','exerciseGoalInput','exerciseStatus')">Set Goal</button>
+
+    <button onclick="updateProgress('exercise',5,'exerciseStatus')">I exercised 5 minutes</button>
+
+    <p class="status" id="exerciseStatus"></p>
+
+    <a href="index.html" style="margin-top:20px; display:inline-block; text-decoration:none; color:#3498db;">← Back to
+        Home</a>
+
+    <script src="script.js"></script>
+    <script>
+        updateStatus('exercise', 'exerciseStatus'); // show current progress
+    </script>
+</body>
+
+</html>
